@@ -275,9 +275,10 @@ details[open] .details-sign { transform: rotate(45deg); }
 .contact-links > div { display: flex; flex-wrap: wrap; gap: 12px 26px; font-size: var(--meta); color: #d8e5f5; margin-top: 18px; }
 .contact-links > div a { display: inline-flex; align-items: center; min-height: 44px; }
 .contact-links > div a:hover { color: white; text-decoration: underline; text-underline-offset: 4px; }
-.site-footer { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px 26px; padding-block: 24px; font-size: var(--caption); color: var(--muted); }
-.site-footer > span:first-child { font-family: var(--serif); font-size: 1.25rem; color: var(--ink); }
-.site-footer a { min-height: 44px; display: inline-flex; align-items: center; }
+.site-footer { display: grid; grid-template-columns: minmax(0,1fr) auto minmax(0,1fr); align-items: center; gap: 12px 26px; padding-block: 24px; font-size: var(--caption); color: var(--muted); }
+.footer-identity { font-size: var(--meta); color: var(--ink); }
+.footer-theme { justify-self: center; color: var(--blue); }
+.site-footer a { justify-self: end; min-height: 44px; display: inline-flex; align-items: center; }
 
 /* Original paper figures can be read at full size without altering their content. */
 .figure-dialog { width: min(1300px,calc(100% - 48px)); max-height: calc(100dvh - 40px); padding: 0; border: 1px solid var(--line); border-radius: 4px; color: var(--ink); background: white; box-shadow: 0 20px 100px #07182c44; }
@@ -400,8 +401,9 @@ body.dialog-open { overflow: hidden; }
   .contact-inner { padding-block: 52px; }
   .contact h2 { font-size: 2.25rem; }
   .email-link { font-size: 1.75rem; }
-  .site-footer > span:first-child { width: 100%; }
-  .site-footer a { margin-left: auto; }
+  .site-footer { grid-template-columns: minmax(0,1fr) auto; gap: 4px 16px; }
+  .footer-identity { grid-column: 1 / -1; }
+  .footer-theme { justify-self: start; }
   .figure-dialog { width: calc(100% - 20px); max-height: calc(100dvh - 20px); }
   .dialog-bar { padding-inline: 14px; }
   .dialog-image-wrap { padding: 10px; max-height: 70dvh; }
