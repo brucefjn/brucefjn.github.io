@@ -1,4 +1,4 @@
-# Bruce (Jianing) Fan
+# Jianing (Bruce) Fan
 
 Personal website for AI engineering, research, and writing.
 
